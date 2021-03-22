@@ -53,11 +53,11 @@ def on_error(error):
     print(f"error: {error}")
 
 
-gamepad = Gamepad()  # create instance
-gamepad.on_begin(callback=on_begin)  # assign callback
-gamepad.on_keys(callback=on_keys)  # assign callback
-gamepad.on_error(callback=on_error)  # assign callback
-gamepad.start()  # read input | this is non-blocking, uses own thread
+gamepad = Gamepad()                     # create instance
+gamepad.on_begin(callback=on_begin)     # assign callback
+gamepad.on_keys(callback=on_keys)       # assign callback
+gamepad.on_error(callback=on_error)     # assign callback
+gamepad.start()                         # read input | this is non-blocking, uses own thread
 ```
 
 ## Author:
