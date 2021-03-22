@@ -21,13 +21,13 @@
 __author__ = "Vinzenz Weist"
 __copyright__ = "Copyright 2020, Vinzenz Weist"
 __license__ = "GPLv3"
-__version__ = "0.0.9"
+__version__ = "1.0.0"
 
 from setuptools import setup
 
 setup(
     name='pypad2',
-    version='0.0.9',
+    version='1.0.0',
     packages=['pypad2'],
     package_dir={'': 'src'},
     license='GPLv3',
