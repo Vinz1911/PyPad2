@@ -19,6 +19,4 @@
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 from .gamepad import Gamepad
-from .gamepad import KeymapType
-from .gamepad import KeymapsXBX
-from .gamepad import KeymapsPS
+from .gamepad import Keymap

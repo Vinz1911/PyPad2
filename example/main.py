@@ -18,27 +18,13 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-from pypad2 import Gamepad, KeymapType, KeymapsPS
+from src.pypad2 import Gamepad, Keymap
 
 
-def on_keys(keys):
-    if KeymapsPS.AXE_L2 in keys:
-        print(keys[KeymapsPS.AXE_L2])
-    if KeymapsPS.AXE_R2 in keys:
-        print(keys[KeymapsPS.AXE_R2])
+gamepad = Gamepad(path='/dev/input/event2')
+print(gamepad.name())
 
-
-def on_begin():
-    print('controller connected & ready')
-
-
-def on_error(error):
-    print(f"error: {error}")
-
-
-gamepad = Gamepad(path='/dev/input/event2', pad=KeymapType.PS)
-gamepad.on_begin(callback=on_begin)
-gamepad.on_keys(callback=on_keys)
-gamepad.on_error(callback=on_error)
-gamepad.start()
-print('start')
+while True:
+    buttons = gamepad.pressed()
+    for button in buttons:
+        print(f'{button.name}: {buttons[button]}')
