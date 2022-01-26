@@ -41,7 +41,6 @@ class Gamepad:
         read the input device's pressed buttons
         :return: the pressed buttons
         """
-        if not self.__input: print('[WARNING]: gamepad is not active, run open')
         return self.__buttons
 
     def name(self) -> str:
@@ -49,6 +48,7 @@ class Gamepad:
         read the input device's friendly name
         :return: the name of the input deice
         """
+        if not self.__input: return str()
         return self.__input.name
 
     def __open(self):
