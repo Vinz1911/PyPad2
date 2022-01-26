@@ -3,7 +3,7 @@
 
 # Setup
 #
-# Copyright (C) 2020 Vinzenz Weist Vinz1911@gmail.com
+# Copyright (C) 2022 Vinzenz Weist Vinz1911@gmail.com
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -21,12 +21,7 @@
 from enum import Enum
 
 
-class KeymapType(Enum):
-    XBX = "Xbox One Controller"
-    PS = "Playstation 4 Controller"
-
-
-class KeymapsPS(Enum):
+class Keymap(Enum):
     BTN_CROSS = 304
     BTN_CIRCLE = 305
     BTN_TRIANGLE = 307
@@ -50,32 +45,6 @@ class KeymapsPS(Enum):
 
     AXE_L2 = 2
     AXE_R2 = 5
-
-    AXE_DX = 16
-    AXE_DY = 17
-
-
-class KeymapsXBX(Enum):
-    BTN_A = 304
-    BTN_B = 305
-    BTN_X = 307
-    BTN_Y = 308
-
-    BTN_LB = 310
-    BTN_RB = 311
-    BTN_LT = 317
-    BTN_RT = 318
-
-    BTN_SELECT = 314
-    BTN_START = 315
-
-    AXE_LX = 0
-    AXE_LY = 1
-    AXE_RX = 3
-    AXE_RY = 4
-
-    AXE_LT = 2
-    AXE_RT = 5
 
     AXE_DX = 16
     AXE_DY = 17
