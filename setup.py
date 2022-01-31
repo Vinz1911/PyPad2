@@ -3,7 +3,7 @@
 
 # setup.py
 #
-# Copyright (C) 2020 Vinzenz Weist Vinz1911@gmail.com
+# Copyright (C) 2020-2022 Vinzenz Weist Vinz1911@gmail.com
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -21,13 +21,13 @@
 __author__ = "Vinzenz Weist"
 __copyright__ = "Copyright 2020, Vinzenz Weist"
 __license__ = "GPLv3"
-__version__ = "2.1.0"
+__version__ = "2.5.0"
 
 from setuptools import setup
 
 setup(
     name='pypad2',
-    version='2.1.0',
+    version='2.5.0',
     packages=['pypad2'],
     package_dir={'': 'src'},
     license='GPLv3',

@@ -37,6 +37,17 @@ from pypad2 import Gamepad, Keymap
 # create instance
 gamepad = Gamepad(path='/dev/input/event2')
 
+# get gamepad's name
+name = gamepad.name()
+print(name)
+
+# get gamepad's status
+status = gamepad.status()
+print(status)  # print's: {'capacity': '100', 'status': 'Discharging'}
+
+# set gamepad's color
+gamepad.color()
+
 while True:
     buttons = gamepad.pressed()
     for button in buttons:
