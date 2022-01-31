@@ -18,18 +18,20 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-from src.pypad2 import Gamepad, Keymap
+from src.pypad2 import Gamepad
 import time
 
 try:
     gamepad = Gamepad(path='/dev/input/event2')
     print(gamepad.name())
+    print(gamepad.status())
+    gamepad.color(0, 255, 255)
     while True:
         buttons = gamepad.pressed()
         for button in buttons:
             print(f'{button.name}: {buttons[button]}')
 
-        time.sleep(0.25)
+        time.sleep(0.016)
 
 except Exception as error:
     print(f'[ERROR]: {error}')
