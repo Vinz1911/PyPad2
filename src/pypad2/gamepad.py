@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-# Setup
+# gamepad.py
 #
 # Copyright (C) 2020 Vinzenz Weist Vinz1911@gmail.com
 #
@@ -52,15 +52,16 @@ class Gamepad:
         return self.__input.name
 
     def __open(self):
-        try:
-            self.__input = InputDevice(self.__path)
-            for entry in Keymap: self.__buttons[entry] = 0
-            self.__thread.start()
-        except Exception as error:
-            print(f'[ERROR]: {error}')
+        self.__input = InputDevice(self.__path)
+        for entry in Keymap: self.__buttons[entry] = 0
+        self.__thread.start()
 
     def __read_input(self):
-        input_events = self.__input.read_loop()
-        for event in input_events:
-            if event.type == ecodes.EV_KEY or event.type == ecodes.EV_ABS:
-                self.__buttons[Keymap(event.code)] = event.value
+        try:
+            input_events = self.__input.read_loop()
+            for event in input_events:
+                if event.type == ecodes.EV_KEY or event.type == ecodes.EV_ABS:
+                    self.__buttons[Keymap(event.code)] = event.value
+        except:
+            self.__buttons = None
+            self.__input.close()

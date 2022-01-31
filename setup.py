@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-# Setup
+# setup.py
 #
 # Copyright (C) 2020 Vinzenz Weist Vinz1911@gmail.com
 #
@@ -21,17 +21,17 @@
 __author__ = "Vinzenz Weist"
 __copyright__ = "Copyright 2020, Vinzenz Weist"
 __license__ = "GPLv3"
-__version__ = "2.0.0"
+__version__ = "2.1.0"
 
 from setuptools import setup
 
 setup(
     name='pypad2',
-    version='2.0.0',
+    version='2.1.0',
     packages=['pypad2'],
     package_dir={'': 'src'},
     license='GPLv3',
-    description='Python Gamepad',
+    description='pypad2 is a lightweight evdev bridge to handle ps4 gamepad input',
     long_description_content_type='text/markdown',
     long_description=open('README.md').read(),
     url='https://github.com/Vinz1911/PyPad2',

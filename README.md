@@ -32,7 +32,7 @@ from pypad2 import Gamepad, Keymap
 ### Examples:
 
 ```python
-from src.pypad2 import Gamepad, Keymap
+from pypad2 import Gamepad, Keymap
 
 # create instance
 gamepad = Gamepad(path='/dev/input/event2')

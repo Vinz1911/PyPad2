@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-# Setup
+# keymaps.py
 #
 # Copyright (C) 2022 Vinzenz Weist Vinz1911@gmail.com
 #

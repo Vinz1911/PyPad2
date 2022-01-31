@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-# Setup
+# main.py
 #
-# Copyright (C) 2020 Vinzenz Weist Vinz1911@gmail.com
+# Copyright (C) 2020-2022 Vinzenz Weist Vinz1911@gmail.com
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -19,12 +19,17 @@
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 from src.pypad2 import Gamepad, Keymap
+import time
 
+try:
+    gamepad = Gamepad(path='/dev/input/event2')
+    print(gamepad.name())
+    while True:
+        buttons = gamepad.pressed()
+        for button in buttons:
+            print(f'{button.name}: {buttons[button]}')
 
-gamepad = Gamepad(path='/dev/input/event2')
-print(gamepad.name())
+        time.sleep(0.25)
 
-while True:
-    buttons = gamepad.pressed()
-    for button in buttons:
-        print(f'{button.name}: {buttons[button]}')
+except Exception as error:
+    print(f'[ERROR]: {error}')
