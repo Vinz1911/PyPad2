@@ -15,11 +15,21 @@
 [![Python](https://img.shields.io/badge/Python-v3.8-blue.svg?logo=python&style=flat)](https://www.python.org) [![PyPi](https://img.shields.io/badge/PyPi-Support-blue.svg?logo=pypi&style=flat)](https://pypi.org)
 
 ## Install & Upgrade:
-```shell
+```bash
 # install via pypi
 pip3 install pypad2
 # upgrade
 pip3 install --upgrade pypad2
+```
+
+## Note:
+```bash
+# access the input without privileges
+# add the current user to the input group
+sudo usermod -a -G input "$(whoami)"
+
+# to change the led's
+copy the `50-pypad2.rules` to "/etc/udev/rules.d"
 ```
 
 ## Import:
